@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HorizontalPanel>
+	  <g:ScrollPanel>
+	  	<g:VerticalPanel ui:field="machineList"/>
+	  </g:ScrollPanel>
+	  <g:HTMLPanel>
+	  	<h2><span ui:field="machineName"/></h2>
+	  	<b>Memory Percent Free: </b><span ui:field="memoryFreePercent"/><br/>
+	  	<b>CPU Used: </b><span ui:field="cpuUtilization"/><br/>
+	  	
+	  	<h3>Files</h3>
+	  	<g:FlexTable ui:field="filesSynced"/>
+	  	
+	  	<h3>Applications</h3>
+	  	<g:FlexTable ui:field="applications"/>
+	  	
+	  	<fieldset>
+	  		<legend>Applications</legend>
+	  		<g:Button ui:field="launchBalancer">Launch Load Balancer</g:Button>
+	  		<g:Button ui:field="launchWebServer">Launch Web Server</g:Button>
+	  	</fieldset>
+	  	
+	  	<g:Button ui:field="terminateNode">Terminate Node</g:Button>
+	  	
+	  </g:HTMLPanel>
+	  </g:HorizontalPanel>
+</ui:UiBinder> 
